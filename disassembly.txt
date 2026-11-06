@@ -1,0 +1,29 @@
+
+challenge:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .text:
+
+0000000000401136 <check_password>:
+  401136:	55                   	push   %rbp
+  401137:	48 89 e5             	mov    %rsp,%rbp
+  40113a:	89 7d ec             	mov    %edi,-0x14(%rbp)
+  40113d:	c7 45 f8 2a 00 00 00 	movl   $0x2a,-0x8(%rbp)
+  401144:	8b 55 f8             	mov    -0x8(%rbp),%edx
+  401147:	89 d0                	mov    %edx,%eax
+  401149:	c1 e0 03             	shl    $0x3,%eax
+  40114c:	29 d0                	sub    %edx,%eax
+  40114e:	83 c0 0d             	add    $0xd,%eax
+  401151:	89 45 fc             	mov    %eax,-0x4(%rbp)
+  401154:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  401157:	3b 45 fc             	cmp    -0x4(%rbp),%eax
+  40115a:	0f 94 c0             	sete   %al
+  40115d:	0f b6 c0             	movzbl %al,%eax
+  401160:	5d                   	pop    %rbp
+  401161:	c3                   	ret
+
+Disassembly of section .fini:
